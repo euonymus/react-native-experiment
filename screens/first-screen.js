@@ -28,9 +28,13 @@ export default class FirstScreen extends React.Component {
 	      Screen 1
 	    </Text>
 	    <Button
-	        onPress={() => this.props.navigation.openDrawer()}
+	        onPress={this.something}
 	        title="Open DrawNavigator"
 	    />
         </View>
+    }
+
+    something = () => {
+	this.props.navigation.openDrawer()
     }
 }

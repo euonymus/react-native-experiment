@@ -23,7 +23,7 @@ const ThreeDrawer = createDrawerNavigator(
 	drawerPosition: 'left',
 	contentOptions: {
 	    activeTintColor: 'red',
-	}
+	},
     }
 );
 export default ThreeDrawer;
