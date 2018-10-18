@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 
 // import { Button, Text, Platform, ScrollView, StyleSheet } from 'react-native';

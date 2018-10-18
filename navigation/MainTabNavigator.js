@@ -1,60 +1,74 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+// import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import ThreeDrawer from './three-drawer';
+// import ThreeDrawer from './three-drawer';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
-const HomeStack = createStackNavigator({
-  Home: ThreeDrawer,
-});
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
-};
+// import { Button, Text, Platform, ScrollView, StyleSheet } from 'react-native';
+import { createDrawerNavigator } from 'react-navigation';
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
-});
+import FirstScreen from '../screens/first-screen';
+import SecondScreen from '../screens/second-screen';
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
-    />
-  ),
-};
+const ThreeDrawer = createDrawerNavigator(
+    {
+	First: {
+	    path: '/',
+	    screen: FirstScreen,
+	},
+	Second: {
+	    path: '/sent',
+	    screen: SecondScreen,
+	},
+    },
+    {
+	initialRouteName: 'First',
+	drawerPosition: 'left',
+	contentOptions: {
+	    activeTintColor: 'red',
+	},
+    }
+);
+export default ThreeDrawer;
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
-});
+// const HomeStack = createStackNavigator({
+//   Home: ThreeDrawer,
+// });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
-  ),
-};
+// const LinksStack = createStackNavigator({
+//   Links: LinksScreen,
+// });
 
-export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
-});
+// LinksStack.navigationOptions = {
+//   tabBarLabel: 'Links',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+//     />
+//   ),
+// };
+
+// const SettingsStack = createStackNavigator({
+//   Settings: SettingsScreen,
+// });
+
+// SettingsStack.navigationOptions = {
+//   tabBarLabel: 'Settings',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+//     />
+//   ),
+// };
+
+// export default createBottomTabNavigator({
+//   HomeStack,
+//   LinksStack,
+//   SettingsStack,
+// });
