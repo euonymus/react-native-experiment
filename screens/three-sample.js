@@ -67,11 +67,27 @@ export default class ThreeSample extends Component {
 
     render() {
 	return (
-      <Expo.GLView
-        ref={(ref) => this._glView = ref}
-        style={{ flex: 1 }}
-        onContextCreate={this._onGLContextCreate}
-      />
+	<View style={
+	    {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center'
+	    }
+	}>
+	    <Text style={{fontSize: 30, color: 'blue'}}>
+	      Screen 1
+	    </Text>
+            <Expo.GLView
+              ref={(ref) => this._glView = ref}
+              style={{ height: 600, width: '100%' }}
+              onContextCreate={this._onGLContextCreate}
+            />
+	    <Button
+	        onPress={() => this.props.navigation.openDrawer()}
+	        title="Open DrawNavigator"
+	    />
+        </View>
+
         )
     }
 }
