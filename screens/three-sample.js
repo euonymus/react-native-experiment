@@ -31,7 +31,8 @@ export default class ThreeSample extends Component {
     }
 
     _onGLContextCreate = async gl => {
-	// const arSession = await this._glView.startARSessionAsync();
+	// const arSession = await this._glView.ARSessionAsync();
+	// const arSession = await this._glView.startAsync();
 	const scene = new THREE.Scene();
 	// const camera = ExpoTHREE.createARCamera(
 	//     arSession,
