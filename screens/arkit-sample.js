@@ -1,3 +1,6 @@
+// MEMO: react-native-arkit requires you to eject project from Expo, so I stopped experimenting
+//       https://github.com/react-native-ar/react-native-arkit
+
 import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
