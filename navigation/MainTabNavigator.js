@@ -11,14 +11,14 @@ import SettingsScreen from '../screens/SettingsScreen';
 // import { Button, Text, Platform, ScrollView, StyleSheet } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation';
 
-import FirstScreen from '../screens/first-screen';
+import ThreeSample from '../screens/three-sample';
 import SecondScreen from '../screens/second-screen';
 
 const ThreeDrawer = createDrawerNavigator(
     {
 	First: {
 	    path: '/',
-	    screen: FirstScreen,
+	    screen: ThreeSample,
 	},
 	Second: {
 	    path: '/sent',
