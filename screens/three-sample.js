@@ -17,7 +17,7 @@ console.disableYellowBox = true;
 
 export default class ThreeSample extends Component {
     static navigationOptions = {
-	tabBarLabel: 'Screen 1',
+	tabBarLabel: 'Three Sample',
 	drawerIcon: ({tintColor}) => {
 	    return (
 		<MaterialIcons
@@ -76,7 +76,7 @@ export default class ThreeSample extends Component {
 	    }
 	}>
 	    <Text style={{fontSize: 30, color: 'blue'}}>
-	      Screen 1
+	      Three Sample
 	    </Text>
             <Expo.GLView
               ref={(ref) => this._glView = ref}
